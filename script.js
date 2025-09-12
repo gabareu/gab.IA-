@@ -123,7 +123,25 @@ const perguntas = [
             }
         ]
     },
-];
+
+    let atual = 0;
+    let perguntaAtual;
+    let historiaFinal="";
+
+    function mostraPergunta(){
+        if(atual >=perguntas.lenght){
+            mostraResultado();
+            return;
+        }
+        perguntaAtual=perguntas[atual];
+        caixaPerguntas.textContent = perguntaAtual.enunciado;
+        caixaAlternativas.textContent="";
+        mostraAlternativa();
+    }
+
+    function mostraAlternativas(){
+        for(const alternativa of perguntaAtual.alternativas)
+    }
 
 
     
